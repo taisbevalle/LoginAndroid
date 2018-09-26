@@ -51,8 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v == forgotPassword){
-                    startActivity(new Intent(getApplicationContext(),
-                            MainActivity.class));
+                    ForgotPassword();
                 }
             }
         });
@@ -67,13 +66,16 @@ public class LoginActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     currentUser = mAuth.getCurrentUser();
                     finish();
-                    startActivity(new Intent(getApplicationContext(),
-                            ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                 }else {
-                    Toast.makeText(LoginActivity.this, "Não foi possível realizar o Login.",
+                    Toast.makeText(LoginActivity.this, "Não foi possível realizar o Login. Verifique o e-mail e senha e tente novamente.",
                             Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    public void ForgotPassword(){
+        startActivity(new Intent(getApplicationContext(), NewUserActivity.class));
     }
 }

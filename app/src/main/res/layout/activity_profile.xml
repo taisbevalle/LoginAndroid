@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="e.taisbedendovalle.sistemaacademico.MainActivity">
+    tools:context="e.taisbedendovalle.sistemaacademico.NewUserActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -101,7 +101,6 @@
             android:background="#6495ed"
             android:text="Calendário"
             android:textColor="#fff"/>
-
 
     </LinearLayout>
 </LinearLayout>

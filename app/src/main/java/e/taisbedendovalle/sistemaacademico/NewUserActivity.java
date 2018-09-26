@@ -5,49 +5,46 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class NewUserActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private EditText password;
     private EditText email;
-    private Button button_register;
-    private Button button_login;
+    private Button register;
+    private Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_new_user);
         email = (EditText) findViewById(R.id.signup_email_input);
         password =(EditText) findViewById(R.id.signup_password_input);
-        button_register = (Button)findViewById(R.id.button_register);
-        button_login = (Button)findViewById(R.id.button_login);
+        register = (Button)findViewById(R.id.button_register);
+        login = (Button)findViewById(R.id.button_login);
         mAuth = FirebaseAuth.getInstance();
 
-        button_register.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (v == button_register){
+                if (v == register){
                     RegisterUser();
                 }
             }
         });
-        button_login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (v == button_login){
+                if (v == login){
                     startActivity(new Intent(getApplicationContext(),
                             LoginActivity.class));
                 }
@@ -74,12 +71,12 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             //User is successfully registered and logged in
                             //start Profile Activity here
-                            Toast.makeText(MainActivity.this, "Autenticação realizada com sucesso.",
+                            Toast.makeText(NewUserActivity.this, "Autenticação realizada com sucesso.",
                                     Toast.LENGTH_SHORT).show();
                             finish();
                             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         }else{
-                            Toast.makeText(MainActivity.this, "Não foi possível realizar a autenticação. Por favor, tente novamente.",
+                            Toast.makeText(NewUserActivity.this, "Não foi possível realizar a autenticação. Por favor, tente novamente.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }catch (Exception e){
