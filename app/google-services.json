@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "341584311616",
+    "firebase_url": "https://exercicio5-dca81.firebaseio.com",
+    "project_id": "exercicio5-dca81",
+    "storage_bucket": "exercicio5-dca81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341584311616:android:8c31f76d0740da0b",
+        "android_client_info": {
+          "package_name": "e.taisbedendovalle.sistemaacademico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341584311616-h8baf78ffg2aus4d6p376p5glg7j3s10.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "e.taisbedendovalle.sistemaacademico",
+            "certificate_hash": "d0ac707339d50c09c84bd4ca3c401c031b549715"
+          }
+        },
+        {
+          "client_id": "341584311616-j8g02k5m2va59piiqbnkptojijbi69mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMQYeLAKx2G6O39hXE-J4HYZBbSrKwoHU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341584311616-j8g02k5m2va59piiqbnkptojijbi69mh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

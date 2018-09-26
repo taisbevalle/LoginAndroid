@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="e.taisbedendovalle.sistemaacademico.MainActivity">
+
+    <TextView
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:text="Portal do Aluno"
+        android:textColor="#324a76"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+
+        <EditText
+            android:id="@+id/login_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/login_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#6495ed"
+            android:text="Entrar"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/forgot_password"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#6495ed"
+            android:text="Esqueceu a Senha"
+            android:textColor="#fff" />
+
+</LinearLayout>
